@@ -1,0 +1,8 @@
+print(getmetatable('a'))
+print(getmetatable('a'))
+print(getmetatable({}))
+print(getmetatable(1))
+local m=require("empty_module")
+local ob=m.new()
+print(ob.empty)
+print(#'123')
