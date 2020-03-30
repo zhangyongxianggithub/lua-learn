@@ -28,7 +28,7 @@ print(utf8_insert("我问问", 1, '我是'))
 --]]
 -- 是否是回文字符串
 local ispali = function(str)
-    local max = #str// 2
+    local max = #str // 2
     for index = 1, max do
         if (str:sub(index, index) ~= str:sub(-index, -index)) then
             return false
