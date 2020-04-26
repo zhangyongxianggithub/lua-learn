@@ -41,7 +41,28 @@ function split(str, sep)
 end
 print(json.encode(split("1./2/3/4 /  67///", "/")))
 
-function split2(str,sep)
-
-
+--这个方法只适用于sep是单字符的情况
+function split2(str, sep)
+    local result = {}
+    if not str or type(str) ~= "string" or str == "" then
+        return result
+    end
+    
+    if type(sep) ~= "string" or sep == "" then
+        result[#result + 1] = str
+        return result
+    end
+    --判断separator
+    sep = sep or " "
+    string.gsub(str, string.format("(.*)%s(.*)", sep), function(s1, s2)
+        if s1 ~= "" then
+            result[#result + 1] = o
+        end
+        if s2 ~= "" then
+            result[#result + 1] = o
+        end
+    end)
+    return result
 end
+print(json.encode(split2("31251281272166", "12")))
+
