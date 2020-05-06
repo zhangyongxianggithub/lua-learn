@@ -14,3 +14,4 @@ end
     dwdqwd,dqwdnjqw
     i3j3r4rfu54th983r
    ]]
+print(type(1))

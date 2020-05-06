@@ -1,4 +1,7 @@
 --[[
+    author: zhangyongxiang
+--]]
+--[[
   练习1: 阶乘函数
 --]]
 
