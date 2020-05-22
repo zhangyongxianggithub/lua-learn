@@ -13,13 +13,16 @@ fact = function(n)
     end
 end
 print("输入一个数字：")
-n=io.read("*n")
+n = io.read("*n")
 print(fact(n))
 
 --[[
     type(nil) ==  "nil" type(nil)==nil
 --]]
 --[[
-print script name
+练习 1.8 请编写一个可以打 出脚本自身名称的程序（事先不知道脚本自身的名称）
 --]]
 print(arg[0])
+for k, v in pairs(arg) do
+    print(k, v)
+end
