@@ -5,7 +5,7 @@ function sum(data)
         return table.remove(data) + sum(data)
     end
 end
-print(sum({1, 2, 3}))
+print(sum({ 1, 2, 3 }))
 function length(data)
     if data == nil then
         return 0
@@ -16,7 +16,7 @@ function length(data)
         return 1 + length(data)
     end
 end
-print(length({2, 3, 4, 5}))
+print(length({ 2, 3, 4, 5 }))
 
 function max_number(data)
     if #data == 1 then
@@ -24,8 +24,10 @@ function max_number(data)
     else
         local max = table.remove(data)
         local sub_max = max_number(data)
-        if max < sub_max then return sub_max end
+        if max < sub_max then
+            return sub_max
+        end
         return max
     end
 end
-print(max_number({2,8,1,9}))
+print(max_number({ 2, 8, 1, 9 }))
