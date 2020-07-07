@@ -60,19 +60,20 @@ end
 --[[
     快速排序
 --]]
+local ARRAY_START = 1
 function quick_sort(array)
     local start = 1
     local length = #array
     if length > start then
         local pivot = sort(array);
         if start < pivot then
-            local left = table.move(array, start, pivot - 1, 1, {})
-            table.move(quick_sort(left), start, pivot - 1, 1, array)
+            local left = table.move(array, start, pivot - 1, ARRAY_START, {})
+            table.move(quick_sort(left), start, pivot - 1, ARRAY_START, array)
         end
 
         if pivot < length then
-            local right = table.move(array, pivot + 1, length, 1, {})
-            table.move(quick_sort(right), 1, #right, pivot + 1, array)
+            local right = table.move(array, pivot + 1, length, ARRAY_START, {})
+            table.move(quick_sort(right), ARRAY_START, #right, pivot + 1, array)
         end
     end
     return array
