@@ -1,7 +1,16 @@
-local mete_char = { ["("] = true, [")"] = true, ["."] = true,
-                    ["%"] = true, ["+"] = true, ["-"] = true,
-                    ["*"] = true, ["?"] = true, ["["] = true,
-                    ["^"] = true, ["$"] = true }
+local mete_char = {
+    ["("] = true,
+    [")"] = true,
+    ["."] = true,
+    ["%"] = true,
+    ["+"] = true,
+    ["-"] = true,
+    ["*"] = true,
+    ["?"] = true,
+    ["["] = true,
+    ["^"] = true,
+    ["$"] = true
+}
 
 local function escape(str)
     local final_str = ""
@@ -16,6 +25,6 @@ local function escape(str)
     return final_str
 end
 print(escape("()"))
-pattern= string.format("^%s(%%d*)(.*)%s$",escape("[[]]11"),escape("1212"))
+pattern = string.format("^%s(%%d*)(.*)%s$", escape("[[]]11"), escape("1212"))
 print(pattern)
-print(string.find("[[]]11111231{}}111121212",pattern))
+print(string.find("[[]]11111231{}}111121212", pattern))

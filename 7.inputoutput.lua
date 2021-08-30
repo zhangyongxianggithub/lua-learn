@@ -9,9 +9,8 @@ function sort(file, write_back_file)
     if file ~= nil then
         io.input(io.open(file, "r"))
     end
-    
+
     if write_back_file ~= nil then
-        
         local output = io.open(write_back_file, "r+")
         if output then
             local current_stream = io.input()
@@ -51,7 +50,7 @@ function read_last_n_lines(file, n)
     if not n or math.type(n) ~= "integer" or n < 1 then
         return nil, "n is not a valid number"
     end
-    local size      = stream:seek("end")
+    local size = stream:seek("end")
     local last_line = ""
     for po = size, 0, -1 do
         stream:seek("set", po)
@@ -83,10 +82,10 @@ function deleteDir(name)
 end
 print(createDir("test1"))
 function show(name)
-    local result = io.popen("ls " .. name,"r")
-    local text=""
+    local result = io.popen("ls " .. name, "r")
+    local text = ""
     for line in result:lines() do
-        text=text..tostring(line).."\n"
+        text = text .. tostring(line) .. "\n"
     end
     return text
 end

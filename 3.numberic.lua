@@ -9,13 +9,13 @@ print(0x110)
 --[[
     解释下列表达式之所以得出相应结果的原因 。 
 --]]
-print(math.maxinteger *2,math.mininteger*2,math.maxinteger*math.maxinteger,math.mininteger *math.mininteger)
-for i=-10,10 do
-    print(i,i%3)
+print(math.maxinteger * 2, math.mininteger * 2, math.maxinteger * math.maxinteger, math.mininteger * math.mininteger)
+for i = -10, 10 do
+    print(i, i % 3)
 end
-print(2^3^2,2^-3^4)
+print(2 ^ 3 ^ 2, 2 ^ -3 ^ 4)
 math.randomseed(os.time())
-r=math.random(1,10 )
+r = math.random(1, 10)
 print(r)
-a=math.random(1,10 )
+a = math.random(1, 10)
 print(a)
